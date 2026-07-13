@@ -20,6 +20,22 @@
 /* ==========================================
    BULLETPROOF MOBILE OVERRIDES
 ========================================== */
+            /* ==========================================
+   GLOBAL: LOCK TO SCREEN (NO SCROLLING)
+========================================== */
+body {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important; 
+    /* Force touch devices not to rubber-band scroll */
+    overscroll-behavior: none; 
+}
+
+.panel {
+    height: calc(100vh - 30px) !important;
+    max-height: calc(100vh - 30px) !important;
+    overflow: hidden !important;
+}
 
 /* Tablet & Smaller Laptops (Max Width: 1024px) */
 @media screen and (max-width: 1024px) {
