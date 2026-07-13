@@ -455,7 +455,7 @@ function runAutoBootSequence() {
             reveal: '.bottom-row' 
         },
         { 
-            text: ">> All systems online. Welcome back, Master Zaid.", 
+            text: ">> All systems online. Welcome back, Master .", 
             delay: 8500, 
             finish: true 
         }
