@@ -1,0 +1,21 @@
+/* Core rotation for Center Panel */
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    0% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Pulsing microphone / system dots */
+@keyframes pulse {
+    0% { opacity: 0.4; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1.05); text-shadow: 0 0 15px var(--cyan); }
+    100% { opacity: 0.4; transform: scale(0.95); }
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}

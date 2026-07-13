@@ -1,0 +1,37 @@
+/* ==========================================
+   MAIN HUD LAYOUT - DYNAMIC OS SCALING
+========================================== */
+.dashboard {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px; 
+    gap: 15px;
+    margin-top: 15px;
+    flex: 1;           /* Dynamically stretches to fill remaining screen height */
+    min-height: 0;     /* Allows the box to shrink safely on small screens */
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 320px; 
+    gap: 15px;
+    margin-top: 15px;
+    height: 130px;     /* Lock the bottom row height */
+    flex-shrink: 0;    /* Prevent the bottom row from being crushed */
+}
+
+/* Force side panels to distribute their boxes evenly */
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.panel-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 15px;
+    flex: 1; 
+    overflow: hidden; /* Locks content inside the border */
+}

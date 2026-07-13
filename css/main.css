@@ -1,0 +1,130 @@
+/* ===========================
+   GLOBAL RESET & GRACEFUL SCROLL
+=========================== */
+body {
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(circle at top, #08325f 0%, transparent 28%),
+        radial-gradient(circle at bottom, #001a32 0%, transparent 30%),
+        #020814;
+    color: var(--text);
+    
+    min-height: 100vh;      /* Use min-height instead of strict height */
+    overflow-x: hidden;     /* Prevent side-to-side scrolling... */
+    overflow-y: auto;       /* ...but ALLOW up-and-down scrolling! */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.panel {
+    width: min(1800px, 100%);
+    min-height: calc(100vh - 30px); /* Fill screen, but allow growing if needed */
+    
+    display: flex;
+    flex-direction: column; 
+    
+    background: linear-gradient(180deg, rgba(5,16,34,.97), rgba(2,8,20,.98));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;       
+    position: relative;
+    box-shadow: var(--shadow);
+}
+/* ==========================================
+   BOOT SCREEN OVERLAY
+========================================== */
+.boot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #020610; /* Deep space background */
+    z-index: 9999; /* Keeps it above everything else */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.power-btn {
+    background: rgba(0, 229, 255, 0.05);
+    border: 2px solid #00e5ff;
+    color: #00e5ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    letter-spacing: 4px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(0, 229, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.power-btn:hover {
+    background: rgba(0, 229, 255, 0.15);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.5), inset 0 0 15px rgba(0, 229, 255, 0.3);
+    transform: scale(1.05);
+}
+/* ==========================================
+   AUTO-BOOT TERMINAL & ANIMATIONS
+========================================== */
+.boot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #010409;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    transition: opacity 1s ease-in-out;
+}
+
+.boot-terminal {
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #00e5ff;
+    max-width: 800px;
+}
+
+.boot-terminal p {
+    margin: 5px 0;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* Hide UI Components by Default */
+.hud-header, 
+.left-panel, 
+.center-panel, 
+.right-panel, 
+.bottom-row {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* The class JavaScript will add to reveal them */
+.ui-revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* Force the body to allow scrolling if the screen is too small */
+body {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto !important; 
+}
+
+/* Ensure the main panel respects the viewport */
+.panel {
+    height: auto !important;
+    min-height: 95vh;
+}

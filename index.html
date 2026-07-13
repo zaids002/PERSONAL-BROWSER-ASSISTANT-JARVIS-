@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS OS v2.0.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/left-pannel.css">
+    <link rel="stylesheet" href="css/center-pannel.css">
+    <link rel="stylesheet" href="css/right-pannel.css">
+    <link rel="stylesheet" href="css/bottom-pannel.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <div id="bootScreen" class="boot-overlay">
+    <div class="boot-terminal" id="bootTerminal">
+        <p class="cyan-text">>> SYSTEM POWER ON...</p>
+    </div>
+</div>
+    <main class="panel">
+        
+        <!-- HEADER HUD -->
+        <header class="hud-header">
+            <div class="header-left">
+                <div class="brand-version">JARVIS OS <span class="v-num">v2.0.1</span></div>
+                <div class="status-indicator"><span class="status-dot"></span> SYSTEM ONLINE <span class="sub-text">All Systems Operational</span></div>
+                <div class="latency-box">LATENCY <span class="cyan-text">24ms</span> <span class="wave-pulse">~_~_</span></div>
+            </div>
+           <div class="header-center">
+                <div class="jarvis-logo-container">
+                    <span class="tech-bracket left-bracket">[</span>
+                    <!-- The data-text attribute is used for the hologram effect -->
+                    <h1 class="main-glow-title" data-text="J A R V I S">J A R V I S</h1>
+                    <span class="tech-bracket right-bracket">]</span>
+                </div>
+                <p class="subtitle-tracking">ARTIFICIAL INTELLIGENCE OPERATING SYSTEM <span class="blinking-cursor">_</span></p>
+            </div>
+            <div class="header-right">
+                <div class="voice-status">VOICE STATUS <span class="cyan-text">IDLE</span></div>
+                <div class="clock-display" id="liveTime">09:41 PM</div>
+                <div class="user-profile">USER <span class="master-tag">MASTER : ZAID</span></div>
+            </div>
+        </header>
+
+        <!-- MAIN DASHBOARD -->
+        <section class="dashboard">
+            
+            <!-- LEFT PANEL -->
+            <aside class="left-panel">
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span class="icon-hud">🌀</span> <span>MISSION CONTROL</span> <span class="arrows">>></span></div>
+                    
+                    <div class="telemetry-bar-item">
+                        <div class="data-row"><span>CPU USAGE</span><strong class="cyan-text">32%</strong></div>
+                        <div class="progress-bar"><div class="fill cyan-bg" style="width: 32%;"></div></div>
+                    </div>
+                    
+                    <div class="telemetry-bar-item">
+                        <div class="data-row"><span>RAM USAGE</span><strong class="purple-text">68%</strong></div>
+                        <div class="progress-bar"><div class="fill purple-bg" style="width: 68%;"></div></div>
+                    </div>
+
+                    <div class="nested-status-list">
+                        <div class="nested-row"><span>NETWORK</span> <span class="cyan-text">STRONG <small>5.2 Mbps</small></span></div>
+                        <div class="nested-row"><span>AI CORE</span> <span class="green-text">STABLE</span></div>
+                        <div class="nested-row"><span>UPTIME</span> <span>3h 42m 11s</span></div>
+                        <div class="nested-row"><span>SYSTEM TEMP</span> <span class="cyan-text">42°C</span></div>
+                    </div>
+                </div>
+
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span>⚡ QUICK ACTIONS</span></div>
+                    <div class="mission-grid">
+                        <button class="mission-btn active-glow" id="voiceBtn">
+                            <span class="btn-icon">🎙️</span><span class="btn-lbl">VOICE CMD</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">🌐</span><span class="btn-lbl">BROWSER</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">🧠</span><span class="btn-lbl">MEMORY</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">📂</span><span class="btn-lbl">FILES</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">⚙️</span><span class="btn-lbl">SETTINGS</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">📧</span><span class="btn-lbl">EMAIL</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">📷</span><span class="btn-lbl">VISION</span>
+                        </button>
+                        <button class="mission-btn">
+                            <span class="btn-icon">💻</span><span class="btn-lbl">TERMINAL</span>
+                        </button>
+                
+                    </div>
+                    
+                </div>
+
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span>⚡ VOICE ACTIVITY</span> <span class="live-tag">LIVE</span></div>
+                    <canvas id="voiceWaveformCanvas" width="260" height="60"></canvas>
+                    <div class="input-level-row"><small>MIC INPUT LEVEL</small> <span class="cyan-text">65%</span></div>
+                </div>
+            </aside>
+
+            <!-- CENTER PANEL (NEURAL REACTOR) -->
+            <section class="center-panel">
+    <div class="reactor-header">NEURAL REACTOR</div>
+    
+    <div class="reactor-stats-left">
+        <div class="stat-node">ENERGY FLOW<br><strong class="cyan-text" id="batteryLevel">--%</strong></div>
+        <div class="stat-node">NEURAL LOAD<br><strong class="cyan-text">68%</strong></div>
+    </div>
+
+    <div class="reactor-stats-right">
+        <div class="stat-node text-right">CORE TEMP<br><strong class="purple-text" id="coreTemp">--°C</strong></div>
+        <div class="stat-node text-right">REACTOR STATUS<br><strong class="green-text">STABLE</strong></div>
+    </div>
+
+   <div class="hub-wrap">
+    <div id="earth"></div>
+    <div class="hud-ring-outer"></div>
+    <div class="hud-ring-tech"></div>
+    <canvas id="globeCanvas" width="360" height="360" style="display: block; width: 360px; height: 360px;"></canvas>
+</div>  
+    
+    <div class="reactor-footer">AI CORE ONLINE</div>
+</section>
+
+            <!-- RIGHT PANEL -->
+            <aside class="right-panel">
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span>📈 SYSTEM TELEMETRY</span></div>
+                    <div class="gauge-grid">
+                        <div class="gauge-box">
+                            <div class="circle-gauge cyan-border"><span>32%</span></div>
+                            <small>CPU USAGE</small>
+                        </div>
+                        <div class="gauge-box">
+                            <div class="circle-gauge purple-border"><span>68%</span></div>
+                            <small>RAM USAGE</small>
+                        </div>
+                    </div>
+                    <!-- Live changing telemetry breakdown spark graphs -->
+                    <canvas id="telemetrySparkCanvas" width="260" height="60"></canvas>
+                </div>
+
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span>PERFORMANCE OVERVIEW</span> <span class="live-tag green-text">REAL TIME</span></div>
+                    <!-- Live Multi-line Grid Chart Matrix -->
+                    <canvas id="performanceGridCanvas" width="260" height="150"></canvas>
+                </div>
+
+                <div class="panel-box border-glow">
+                    <div class="panel-title"><span>AI STATUS</span></div>
+                    <div class="ai-status-container">
+                        <div class="confidence-metrics">
+                            <small>CONFIDENCE LEVEL</small>
+                            <h2 class="cyan-text display-pct">96%</h2>
+                            <div class="metric-blocks"><span></span><span></span><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="radar-dot-circle"></div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- BOTTOM HUD INTERFACE ROW -->
+        <section class="bottom-row">
+            <div class="panel-box border-glow transcript-box">
+                <div class="panel-title"><span>TRANSCRIPT</span> <span class="live-tag">LIVE</span></div>
+                <div class="chat-terminal" id="conversationLog">
+                    <p><span class="label-user">You</span> <span id="transcript" class="val-text">Jarvis, open the analysis dashboard</span></p>
+                    <p><span class="label-jarvis">JARVIS</span> <span class="val-text" id="response">Accessing analysis dashboard...</span></p>
+                </div>
+                <div class="hidden-override">
+                    <input type="text" id="chatInput" placeholder="System override input...">
+                    <button id="sendBtn">EXECUTE</button>
+                </div>
+            </div>
+
+            <div class="panel-box border-glow response-panel">
+                <div class="panel-title"><span>AI RESPONSE</span> <span class="live-tag green-text">ONLINE</span></div>
+                <div id="responseBox" class="terminal-response-output">
+                    All systems are operational. <br>
+                    Neural pathways are stable. <br>
+                    How can I assist you further, Master Zaid?
+                </div>
+            </div>
+
+            <div class="panel-box border-glow engine-panel">
+                <div class="panel-title"><span>VOICE ENGINE</span> <span class="live-tag text-muted">IDLE</span></div>
+                <div class="engine-flex">
+                    <div class="circular-engine-mic"><span class="mic-inner-dot"></span></div>
+                    <div class="engine-sliders">
+                        <div class="sld-row"><small>SPEECH RATE</small> <span class="blocks-indicator">■■■■□</span></div>
+                        <div class="sld-row"><small>PITCH</small> <span class="blocks-indicator">■■■□□</span></div>
+                        <div class="sld-row"><small>TONE</small> <span class="cyan-text font-orbitron">NEUTRAL</span></div>
+                    </div>
+                </div>
+                <div id="status" class="system-status-tiny">READY</div>
+                <button id="pipBtn" class="border-glow-button" style="margin-top: 10px; font-family: 'Orbitron', sans-serif; background: transparent; color: #00e5ff; border: 1px solid rgba(0, 229, 255, 0.3); padding: 5px 10px; cursor: pointer; letter-spacing: 1px; font-size: 0.7rem;">
+    LAUNCH FLOATING HUD [⧉]
+</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+[
+  {
+    "sender": "user",
+    "text": "Hi, Jarvis.",
+    "time": "2026-06-22T14:03:26.052Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T14:05:17.314Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:05:30.252Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:06:18.131Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T14:07:42.047Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T14:08:34.500Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google and open GitHub.",
+    "time": "2026-06-22T14:08:57.793Z"
+  },
+  {
+    "sender": "user",
+    "text": "open google and search github",
+    "time": "2026-06-22T14:09:21.947Z"
+  },
+  {
+    "sender": "user",
+    "text": "open github",
+    "time": "2026-06-22T14:09:34.864Z"
+  },
+  {
+    "sender": "user",
+    "text": "open instagram",
+    "time": "2026-06-22T14:09:46.496Z"
+  },
+  {
+    "sender": "user",
+    "text": "What's the latest news?",
+    "time": "2026-06-22T14:10:16.596Z"
+  },
+  {
+    "sender": "user",
+    "text": "whats the latest news'",
+    "time": "2026-06-22T14:10:27.938Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:17:41.156Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:22:03.216Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:22:23.099Z"
+  },
+  {
+    "sender": "user",
+    "text": "How are you?",
+    "time": "2026-06-22T14:25:22.555Z"
+  },
+  {
+    "sender": "user",
+    "text": "Hello, Jarvis.",
+    "time": "2026-06-22T14:27:49.111Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:28:14.815Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T14:28:22.686Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T14:31:39.300Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T14:31:47.515Z"
+  },
+  {
+    "sender": "user",
+    "text": "whats barcellona",
+    "time": "2026-06-22T14:32:17.543Z"
+  },
+  {
+    "sender": "user",
+    "text": "whats barcelona",
+    "time": "2026-06-22T14:32:29.080Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open command prompt.",
+    "time": "2026-06-22T15:25:58.173Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open GitHub.",
+    "time": "2026-06-22T15:26:08.776Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open GitHub.",
+    "time": "2026-06-22T15:26:25.729Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T15:27:24.799Z"
+  },
+  {
+    "sender": "user",
+    "text": "What's the time?",
+    "time": "2026-06-22T15:28:03.426Z"
+  },
+  {
+    "sender": "user",
+    "text": "What's the latest news?",
+    "time": "2026-06-22T15:29:28.261Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T15:29:42.198Z"
+  },
+  {
+    "sender": "user",
+    "text": "Hi, Jarvis.",
+    "time": "2026-06-22T15:38:49.805Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T15:39:07.354Z"
+  },
+  {
+    "sender": "user",
+    "text": "What's the news today?",
+    "time": "2026-06-22T15:39:20.943Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T16:49:56.063Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T16:54:46.980Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T16:54:56.080Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T16:55:50.788Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T16:55:58.952Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T16:56:10.604Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T16:58:15.720Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T16:58:22.685Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Twitter.",
+    "time": "2026-06-22T16:58:30.669Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open YouTube.",
+    "time": "2026-06-22T17:02:24.726Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open in.",
+    "time": "2026-06-22T17:02:41.963Z"
+  },
+  {
+    "sender": "user",
+    "text": "GitHub.",
+    "time": "2026-06-22T17:03:20.075Z"
+  },
+  {
+    "sender": "user",
+    "text": "My Akbar.",
+    "time": "2026-06-22T17:03:48.527Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T17:03:56.097Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open GitHub.",
+    "time": "2026-06-22T17:04:02.608Z"
+  },
+  {
+    "sender": "user",
+    "text": "Start call Gaye Roll.",
+    "time": "2026-06-22T17:04:34.909Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:04:39.167Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T17:04:46.456Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open GitHub.",
+    "time": "2026-06-22T17:05:01.596Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open News.",
+    "time": "2026-06-22T17:06:58.600Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open what?",
+    "time": "2026-06-22T17:13:22.794Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open what?",
+    "time": "2026-06-22T17:13:27.996Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open WhatsApp.",
+    "time": "2026-06-22T17:13:37.793Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open camera.",
+    "time": "2026-06-22T17:13:57.736Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Spotify.",
+    "time": "2026-06-22T17:15:36.471Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open weather.",
+    "time": "2026-06-22T17:16:02.998Z"
+  },
+  {
+    "sender": "user",
+    "text": "Actual grounds.",
+    "time": "2026-06-22T17:16:32.319Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Bing.",
+    "time": "2026-06-22T17:16:37.980Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open LinkedIn.",
+    "time": "2026-06-22T17:16:46.155Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Translate.",
+    "time": "2026-06-22T17:17:59.270Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Instagram.",
+    "time": "2026-06-22T17:18:24.925Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open drive.",
+    "time": "2026-06-22T17:21:16.750Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:22:04.249Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:22:08.541Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Maps.",
+    "time": "2026-06-22T17:22:17.336Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Twitter.",
+    "time": "2026-06-22T17:22:41.584Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Facebook.",
+    "time": "2026-06-22T17:23:31.923Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:24:52.876Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:25:01.404Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open docs.",
+    "time": "2026-06-22T17:25:08.226Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Settings.",
+    "time": "2026-06-22T17:25:41.743Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Chrome.",
+    "time": "2026-06-22T17:26:20.848Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Pinterest.",
+    "time": "2026-06-22T17:31:56.525Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Pinterest.",
+    "time": "2026-06-22T17:32:10.504Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Reddit.",
+    "time": "2026-06-22T17:34:22.543Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Reddit.",
+    "time": "2026-06-22T17:34:32.465Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Reddit.",
+    "time": "2026-06-22T17:34:45.053Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Pinterest.",
+    "time": "2026-06-22T17:34:52.466Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Google.",
+    "time": "2026-06-22T17:36:23.328Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open.",
+    "time": "2026-06-22T17:36:31.821Z"
+  },
+  {
+    "sender": "user",
+    "text": "Pinterest.",
+    "time": "2026-06-22T17:36:37.987Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open it.",
+    "time": "2026-06-22T17:36:47.463Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open Reddit.",
+    "time": "2026-06-22T17:36:51.419Z"
+  },
+  {
+    "sender": "user",
+    "text": "Open test.",
+    "time": "2026-06-22T17:37:50.400Z"
+  },
+  {
+    "sender": "user",
+    "text": "Pinterest.",
+    "time": "2026-06-22T17:37:55.175Z"
+  }
+]

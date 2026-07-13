@@ -1,0 +1,110 @@
+/* ==========================================
+   CENTER REACTOR LAYOUT
+========================================== */
+.center-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    border-radius: 12px;
+    background: radial-gradient(circle at center, rgba(0, 76, 153, 0.15) 0%, transparent 60%);
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Floating Headers */
+.reactor-header {
+    position: absolute;
+    top: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #62b3ff;
+    letter-spacing: 4px;
+}
+
+.reactor-footer {
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #00ff9d;
+    letter-spacing: 3px;
+}
+
+/* Floating Stats (Energy Flow, Core Temp, etc.) */
+.reactor-stats-left, .reactor-stats-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly center vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 250px; /* Space them out vertically so they sit above and below the globe */
+    font-size: 11px;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 10;
+}
+
+.reactor-stats-left { 
+    left: 25px; 
+    text-align: left; 
+}
+.reactor-stats-right { 
+    right: 25px; 
+    text-align: right; 
+}
+
+.stat-node strong {
+    font-size: 18px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Ensure the Globe stays perfectly centered */
+.hub-wrap {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Ensure the canvas is visible and layered on top */
+#globeCanvas {
+    display: block;      /* Canvas defaults to inline, which causes height issues */
+    position: relative;  /* Keeps it inside the hub-wrap */
+    z-index: 20;         /* Forces it on top of the rings */
+    width: 360px;        /* Matches your HTML width */
+    height: 360px;       /* Matches your HTML height */
+    pointer-events: none; /* Let clicks pass through to background elements */
+}
+
+/* Ensure the hub-wrap has enough space */
+.hub-wrap {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#globeCanvas {
+    position: absolute;
+    z-index: 20;
+    /* Force the canvas to match its container */
+    width: 360px;
+    height: 360px;
+    pointer-events: none;
+}
+#earth {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 20px #00f7ff);
+    z-index: 5;
+}

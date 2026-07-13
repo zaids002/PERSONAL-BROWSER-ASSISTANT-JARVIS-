@@ -1,0 +1,136 @@
+/* ==========================================
+   HEADER HUD FIXES
+========================================== */
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+    background: rgba(4, 12, 28, 0.6);
+    border-radius: 12px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1; /* Forces side sections to take equal space */
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Centers the title perfectly */
+    white-space: nowrap; /* Prevents the title from wrapping to a new line */
+}
+
+/* Micro-styling for the header text */
+.brand-version, .voice-status, .latency-box {
+    font-size: 11px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+.status-indicator {
+    font-size: 11px;
+    color: #00ff9d;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sub-text, .master-tag {
+    color: #729cb3;
+    font-size: 9px;
+    margin-left: 8px;
+}
+/* =========================================
+   JARVIS CORE LOGO UPGRADES
+   ========================================= */
+.jarvis-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Spacing between brackets and name */
+}
+
+/* Pulsing targeting brackets around the name */
+.tech-bracket {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: rgba(0, 229, 255, 0.3);
+    font-weight: 300;
+    animation: pulse-bracket 2s infinite ease-in-out;
+}
+
+/* Deep holographic core text */
+.main-glow-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(0, 229, 255, 0.8), 
+        0 0 20px rgba(0, 229, 255, 0.6), 
+        0 0 40px rgba(0, 229, 255, 0.4),
+        0 0 80px rgba(0, 229, 255, 0.2);
+    letter-spacing: 12px;
+    margin: 0;
+    position: relative;
+}
+
+/* Secondary ghost layer that flickers like an unstable hologram */
+.main-glow-title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #00e5ff;
+    z-index: -1;
+    filter: blur(4px);
+    opacity: 0.7;
+    animation: core-flicker 4s infinite alternate;
+}
+
+/* Subtitle styling */
+.subtitle-tracking {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    color: #00e5ff;
+    letter-spacing: 6px;
+    margin-top: 5px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+/* Classic terminal cursor effect */
+.blinking-cursor {
+    display: inline-block;
+    width: 8px;
+    animation: terminal-blink 1s step-end infinite;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes pulse-bracket {
+    0%, 100% { opacity: 0.3; text-shadow: none; transform: scale(1); }
+    50% { opacity: 1; text-shadow: 0 0 15px #00e5ff; transform: scale(1.05); }
+}
+
+@keyframes core-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.8; text-shadow: 0 0 20px #00e5ff; }
+    20%, 24%, 55% { opacity: 0.2; text-shadow: none; }
+}
+
+@keyframes terminal-blink {
+    50% { opacity: 0; }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "jarvis-assistant",
+  "version": "1.0.0",
+  "description": "Jarvis assistant with backend memory support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,13 @@
+:root {
+    --bg: #030811; /* Deepest image background */
+    --panel: rgba(5, 12, 25, 0.75); /* Panel background */
+    --cyan: #00E5FF;
+    --cyan-dim: rgba(0, 229, 255, 0.2);
+    --purple: #C84CFF;
+    --green: #00FF9D;
+    --text: #E0F7FA;
+    --muted: #6490A7;
+    
+    --border: 1px solid var(--cyan-dim);
+    --radius: 12px;
+}

@@ -1,0 +1,235 @@
+/* ==========================================
+   JARVIS OS - AI CORE v1
+========================================== */
+
+.center-panel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hub-wrap{
+
+    width:430px;
+    height:430px;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ---------- MAIN RINGS ---------- */
+
+.ring,
+.ring-mid,
+.ring-inner{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:2px solid rgba(0,229,255,.18);
+
+    box-shadow:
+        0 0 18px rgba(0,229,255,.15);
+
+}
+
+.ring{
+
+    width:360px;
+    height:360px;
+animation: rotateClock 18s linear infinite;
+}
+
+.ring-mid{
+
+    width:280px;
+    height:280px;
+    animation: rotateAnti 12s linear infinite;
+
+}
+
+.ring-inner{
+
+    width:190px;
+    height:190px;
+animation: rotateClock 8s linear infinite;
+}
+
+/* ---------- CENTER CORE ---------- */
+
+.ring-core{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    #9efcff 0%,
+    #32ddff 45%,
+    #0088cc 100%);
+
+    box-shadow:
+        0 0 25px #00e5ff,
+        0 0 60px rgba(0,229,255,.5);
+
+    z-index:20;
+
+}
+
+/* ---------- ENERGY ---------- */
+
+.core-energy{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,229,255,.45),
+    transparent 70%);
+
+    filter:blur(15px);
+
+    z-index:5;
+animation: breathe 3s ease-in-out infinite;
+}
+
+/* ---------- GLOW ---------- */
+
+.core-glow{
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,229,255,.18),
+    transparent 72%);
+
+    filter:blur(25px);
+
+    z-index:1;
+animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ---------- CENTER DOT ---------- */
+
+.core-dot{
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    z-index:25;
+
+    box-shadow:
+        0 0 15px white;
+
+}
+
+/* ---------- LABEL ---------- */
+
+.core-label{
+
+    position:absolute;
+
+    bottom:30px;
+
+    font-family:'Orbitron',sans-serif;
+
+    letter-spacing:6px;
+
+    font-size:15px;
+
+    color:#00e5ff;
+
+    text-shadow:
+        0 0 15px #00e5ff;
+
+}
+/* ==========================================
+   AI CORE ANIMATIONS
+========================================== */
+
+@keyframes breathe {
+
+    0%{
+        transform:scale(1);
+        opacity:.9;
+    }
+
+    50%{
+        transform:scale(1.08);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:.9;
+    }
+
+}
+
+@keyframes rotateClock {
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+@keyframes rotateAnti {
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+
+}
+
+@keyframes pulseGlow {
+
+    0%{
+        filter:blur(25px);
+        opacity:.45;
+    }
+
+    50%{
+        filter:blur(35px);
+        opacity:.85;
+    }
+
+    100%{
+        filter:blur(25px);
+        opacity:.45;
+    }
+
+}

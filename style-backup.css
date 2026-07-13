@@ -1,0 +1,575 @@
+/* ===========================
+   JARVIS OS DESIGN SYSTEM v1
+=========================== */
+
+:root{
+    --bg:#05070D;
+    --panel:rgba(12,18,30,.72);
+    --border:rgba(0,229,255,.15);
+
+    --cyan:#00E5FF;
+    --purple:#C84CFF;
+    --green:#00FFC8;
+    --text:#F4F7FB;
+    --muted:#8FA6C9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at top,
+        rgba(0,229,255,.12),
+        transparent 45%);
+    pointer-events:none;
+}
+
+/* Titles */
+
+h1,h2,h3{
+    font-family:'Orbitron',sans-serif;
+    letter-spacing:2px;
+}
+
+/* Buttons */
+
+button{
+
+    background:rgba(0,229,255,.08);
+
+    border:1px solid rgba(0,229,255,.25);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 18px rgba(0,229,255,.35);
+
+}
+
+/* Inputs */
+
+input{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:12px;
+
+}
+
+.card{
+
+    background:var(--panel);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:
+    0 0 25px rgba(0,229,255,.08);
+
+}
+/* ======================================================
+   MISSION CONTROL PANEL
+====================================================== */
+
+.mission-card{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.card-title{
+.title-line{
+
+    width:70px;
+
+    height:2px;
+
+    margin:12px auto 0;
+
+    background:#00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff;
+
+}
+    font-family:'Orbitron',sans-serif;
+
+    color:#00e5ff;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-align:center;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid rgba(0,229,255,.15);
+
+    text-shadow:
+        0 0 12px rgba(0,229,255,.5);
+
+}
+
+.mission-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+.mission-btn{
+
+    background:rgba(0,229,255,.05);
+
+    border:1px solid rgba(0,229,255,.18);
+
+    border-radius:16px;
+
+    height:95px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    color:#dffcff;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.mission-btn span{
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.mission-btn:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    border-color:#00e5ff;
+
+    box-shadow:
+        0 0 18px rgba(0,229,255,.35),
+        inset 0 0 15px rgba(0,229,255,.12);
+
+}
+
+.mission-btn:active{
+
+    transform:scale(.96);
+
+}
+@keyframes panelGlow{
+
+    0%{
+
+        box-shadow:
+        0 0 10px rgba(0,229,255,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 22px rgba(0,229,255,.35);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 10px rgba(0,229,255,.15);
+
+    }
+
+}
+
+.mission-btn{
+
+    animation:panelGlow 4s infinite ease-in-out;
+
+}
+/* ================= HEADER ================= */
+
+.hud-header{
+
+height:90px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 30px;
+
+margin-bottom:25px;
+
+background:rgba(0,15,35,.55);
+
+border:1px solid rgba(0,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border-radius:20px;
+
+box-shadow:
+
+0 0 25px rgba(0,255,255,.08);
+
+}
+
+.hud-left{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.jarvis-logo{
+
+width:58px;
+
+height:58px;
+
+position:relative;
+
+}
+
+.logo-ring{
+
+position:absolute;
+
+inset:0;
+
+border:2px solid cyan;
+
+border-radius:50%;
+
+animation:rotateLogo 8s linear infinite;
+
+}
+
+.logo-core{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:#00ffff;
+
+box-shadow:
+
+0 0 20px cyan;
+
+}
+
+.hud-title h1{
+
+font-size:28px;
+
+letter-spacing:4px;
+
+color:#8ef9ff;
+
+}
+
+.hud-title span{
+
+font-size:12px;
+
+color:#79bdd5;
+
+}
+
+.hud-center{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.system-pill{
+
+padding:10px 18px;
+
+border:1px solid rgba(0,255,255,.15);
+
+border-radius:50px;
+
+background:rgba(0,255,255,.04);
+
+font-size:13px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.status-dot{
+
+width:10px;
+
+height:10px;
+
+background:#00ff9c;
+
+border-radius:50%;
+
+animation:pulseDot 1.2s infinite;
+
+}
+
+.clock-box{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#a7ffff;
+
+margin-right:20px;
+
+}
+
+.profile-box{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.profile-avatar{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#00cfff,#00fffb);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:bold;
+
+color:#031019;
+
+}
+
+@keyframes rotateLogo{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes pulseDot{
+
+50%{
+
+opacity:.4;
+
+transform:scale(.6);
+
+}
+
+}
+/* =========================
+   STEP 3 FIX (MISSION GRID)
+========================= */
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.mission-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-icon {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.hub-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Center core fix */
+.ring-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* smoother glow */
+.core-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+        rgba(0, 180, 255, 0.8),
+        rgba(0, 100, 255, 0.2),
+        transparent
+    );
+
+    filter: blur(20px);
+}
+body {
+    overflow-x: hidden;
+}
+
+/* smooth UI transitions everywhere */
+* {
+    transition: all 0.25s ease-in-out;
+}
+
+/* mission buttons hover glow */
+.mission-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.4);
+}
+
+/* status cards glow effect */
+.status-card {
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.15);
+}
+
+/* center core pulse feel */
+.core-glow {
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+}
