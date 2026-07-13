@@ -149,32 +149,6 @@ or use **VS Code Live Server** for the best experience.
 
 ---
 
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit changes
-
-```bash
-git commit -m "Added new feature"
-```
-
-4. Push
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
----
 
 # ⭐ Support
 
@@ -196,7 +170,7 @@ This project is licensed under the MIT License.
 
 Software Developer • AI Enthusiast • Building a real-life JARVIS
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/zaids002
 
 ---
 
