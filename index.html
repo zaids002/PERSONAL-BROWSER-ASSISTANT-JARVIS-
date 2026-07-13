@@ -16,21 +16,103 @@
     <link rel="stylesheet" href="css/right-pannel.css">
     <link rel="stylesheet" href="css/bottom-pannel.css">
     <link rel="stylesheet" href="css/animation.css">
-        <link rel="stylesheet" href="css/animation.css">
+        <style>
+/* ==========================================
+   BULLETPROOF MOBILE OVERRIDES
+========================================== */
+
+/* Tablet & Smaller Laptops (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Force Dashboard into a vertical stack */
+    .dashboard {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        gap: 20px !important;
+    }
     
-    <!-- Paste the mobile overrides right here -->
-    <style>
-        /* ==========================================
-           MOBILE & TABLET RESPONSIVE OVERRIDES
-           ========================================== */
-           
-        /* Tablet & Smaller Laptops (Max Width: 1024px) */
-        @media screen and (max-width: 1024px) {
-            /* ... all the code from previous message ... */
-        }
-        
-        /* ... rest of the media queries ... */
-    </style>
+    /* Force Bottom Row into a vertical stack */
+    .bottom-row {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    /* Stack header items vertically */
+    .hud-header {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+    
+    .header-left, .header-center, .header-right {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    /* Give center panel breathing room */
+    .center-panel {
+        padding: 40px 0 !important;
+        min-height: 450px !important;
+    }
+
+    /* Scale the globe elements safely */
+    .hub-wrap {
+        transform: scale(0.85) !important; 
+    }
+    
+    /* Release panel flex restrictions */
+    .panel-box {
+        flex: none !important;
+        height: auto !important;
+    }
+}
+
+/* Smartphones (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Scale the globe down further */
+    .hub-wrap {
+        transform: scale(0.65) !important;
+    }
+    
+    /* Push reactor stats outward */
+    .reactor-stats-left, .reactor-stats-right {
+        gap: 320px !important; 
+    }
+
+    /* Quick Actions 2-column grid */
+    .mission-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Adjust outer panel padding */
+    .panel {
+        padding: 10px !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* Very Small Screens (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    .hub-wrap {
+        transform: scale(0.55) !important;
+    }
+
+    /* Re-flow floating stats to sit above/below globe */
+    .reactor-stats-left, .reactor-stats-right {
+        position: relative !important;
+        transform: none !important;
+        top: auto !important; 
+        left: auto !important; 
+        right: auto !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin: 15px 0 !important;
+    }
+}
+</style>
 </head>
 <body>
     <div id="bootScreen" class="boot-overlay">
